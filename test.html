@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hültár</title>
+    <script defer src="public/uj.js"></script>
+    <script defer src="public/uj-letrehozas.js"></script>
+    <script defer src="public/uj-alaphelyzetbe.js"></script>
+    <script defer src="public/uj-mennyiseg.js"></script>
+    <script defer src="public/script.js"></script>
+    <script defer src="public/ikonok.js"></script>
+</head>
+
+<body>
+    <div class="hultar-cimke">
+        <h3>hültár</h3>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="hultar-ikon" viewBox="0 0 512 512" width="55" height="55"><path d="M359.483,5H152.517A45.642,45.642,0,0,0,107,51V435.314c0,18.487,10,34.451,26,41.755V501a6.219,6.219,0,0,0,6.25,6h38.234c3.314,0,5.516-2.687,5.516-6V481H329v20c0,3.313,2.2,6,5.516,6H372.75a6.219,6.219,0,0,0,6.25-6V477.069c16-7.3,26-23.268,26-41.755V51A45.642,45.642,0,0,0,359.483,5ZM171,495H145V480.735a52.563,52.563,0,0,0,7.517.265H171Zm10-26H162v-2.8a23.667,23.667,0,0,1,19-23.148Zm34,0H193V443h22Zm35,0H227V443h23Zm35,0H262V443h23Zm34,0H297V443h22Zm12,0V442.867c11,1.915,20,11.648,20,23.338V469Zm36,26H341V481h18.483a52.563,52.563,0,0,0,7.517-.265Zm26-59.686a33.352,33.352,0,0,1-30,33.507v-2.616c0-19.677-16.076-35.2-35.753-35.2h-141.5C166.065,431,150,446.528,150,466.205V468.9a33.346,33.346,0,0,1-31-33.585V156h21v31.033a22,22,0,0,0,44,0V156H393ZM152,187.033V113a10,10,0,0,1,20,0v74.035a10,10,0,0,1-20,0ZM393,144H184V113a22,22,0,0,0-44,0v31H119V51a33.629,33.629,0,0,1,33.517-34H359.483A33.629,33.629,0,0,1,393,51Z"/><path d="M368,92H304a10,10,0,0,0-10,10v18a10,10,0,0,0,10,10h64a10,10,0,0,0,10-10V102A10,10,0,0,0,368,92Zm-3,26H306V104h59Z"/><path d="M136,238.106a6,6,0,0,0-6,6v75.807a6,6,0,0,0,12,0V244.106A6,6,0,0,0,136,238.106Z"/><path d="M136,212.892a6,6,0,0,0-6,6v4.834a6,6,0,0,0,12,0v-4.834A6,6,0,0,0,136,212.892Z"/></svg>-->
+    </div>
+   
+    <div class="tartalom">
+        <table>
+            <tr>
+                <td>Név</td>
+                <td>Mennyiség</td>
+                <td>Lejárat</td>
+                <td class="interakciok-td">Interakciók</td>
+            </tr>
+            <tr></tr>
+        </table>
+    </div>
+
+    <div class="tartalom">
+
+  <button type="button" onclick="ujAlaphelyzetbe()" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Új hozzáadása</button>
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Új élelmiszer hozzáadása</h4>
+          <button type="button" onclick="ujAlaphelyzetbe()" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <div class="modal-body" id="uj-1">
+            <p style="font-size: 18px;">Kérlek add meg a nevét a hozzáadni kívánt élelmiszernek</p>
+            <input id="uj-nev-beiras" placeholder="Pl.: Tej" type="text">
+        </div>
+
+        <div class="modal-body" id="uj-2">
+            <p style="font-size: 18px;">Kérlek add meg a(z) <b><span id="uj-2-mennyiseg"></span></b> mennyiségét</p>
+            <div class="uj-mennyiseg">
+                    <button class="interakcio-gomb" onclick="ujMennyisegAllitas('minusz')" id="uj-mennyiseg-minusz">-</button>
+                    <input disabled style="text-align: center;" id="uj-mennyiseg-beiras" value="1" max="100" min="1" type="number">
+                    <button class="interakcio-gomb" onclick="ujMennyisegAllitas('plussz')" id="uj-mennyiseg-plussz">+</button>
+                <div class="mertekegyseg-valaszto">
+                    <p>Mértékegység:</p>
+                    <select id="uj-mertekegyseg">
+                        <option value="db">Darab</option>
+                        <option value="doboz">Doboz</option>
+                        <option value="l">Liter</option>
+                        <option value="kg">Kiló</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-body" id="uj-3">
+            <p style="font-size: 18px;">Kérlek add meg a(z) <b><span id="uj-2-mennyiseg"></span></b> lejárati dátumát</p>
+            <input id="uj-lejaratidatum-beiras" type="date" name="lejarati">
+        </div>
+        
+
+
+
+        <div class="modal-footer" id="uj-1-footer">
+            <button class="modal-vissza lathatatlan">Vissza</button>
+            <button class="modal-kovetkezo" onclick="ujLetrehozasMenu(2)">Következő</button>
+        </div>
+
+        <div class="modal-footer" id="uj-2-footer">
+            <button class="modal-vissza" onclick="ujLetrehozasMenu(1)">Vissza</button>
+            <button class="modal-kovetkezo" onclick="ujLetrehozasMenu(3)">Következő</button>
+        </div>
+
+        <div class="modal-footer" id="uj-3-footer">
+            <button class="modal-vissza" onclick="ujLetrehozasMenu(2)">Vissza</button>
+            <button class="modal-befejez" onclick="ujHozzadas()">Hozzáadás</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="asdasd"></div>
+</body>
+</html>
+
+<!-- 3:52 -->

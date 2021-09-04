@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/styles/style-lista.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hültár - Főmenü</title>
+    <script defer src="public/lista-keszen.js"></script>
+    <script defer src="public/lista-uj.js"></script>
+    <script defer src="public/lista.js"></script>
+    <script defer src="public/uj-mennyiseg.js"></script>
+</head>
+
+<body>
+    <div class="lista-cimke">
+        <h3>Bevásárló lista</h3>
+    </div>
+
+    
+    <div>
+        <table id="tablazat">
+            <tr>
+                <td colspan="5" class="termek"><i class="fas fa-shopping-cart"></i></td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="elvalaszto-csik">
+        <br>
+        <hr>
+    </div>
+
+    <div class="uj-hozzaadasa">
+        <div class="lista-cimke">
+            <h3>Új felvétele</h3>
+        </div>
+        <label for="szoveg">Termék: <input name="szoveg" id="uj-szoveg" type="text"></label><br>
+        <label for="mennyiseg">Mennyiség: 
+            <button name="mennyiseg" class="interakcio-gomb" onclick="ujMennyisegAllitas('minusz')" id="uj-mennyiseg-minusz">-</button>
+            <input disabled id="uj-mennyiseg-beiras" value="1" max="100" min="1" type="number">
+            <button class="interakcio-gomb" onclick="ujMennyisegAllitas('plussz')" id="uj-mennyiseg-plussz">+</button>
+        </label>
+        <label for="mertekegyseg">
+            <select name="mertekegyseg" id="uj-mertekegyseg">
+                <option value="db">Darab</option>
+                <option value="doboz">Doboz</option>
+                <option value="l">Liter</option>
+                <option value="kg">Kiló</option>
+            </select>
+        </label><br>
+
+        <button id="uj-hozzaadas-gomb">Hozzáadás</button>
+
+        <div class="elvalaszto-csik">
+            <hr>
+        </div>
+    </div>
+
+</body>
+</html>
