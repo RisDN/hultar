@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+body {
+    background-color: #eeeeee;
+    background-size: 2712px 2712px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+
+/*
+    background-image: url('../kepek/zarva.png');
+    background-position: 50% -0.5%;
+    background-repeat: no-repeat;
+*/
+
+.lista-cimke {
+    margin-top: 5vh;
+    text-align: center;
+    color: #8C8C8C;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.uj-hozzaadas {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+td {
+    font-size: 35px;
+    padding: 5px;
+    background-color: rgb(134, 134, 134);
+    border-bottom: rgb(5, 5, 5) 1px solid;
+}
+
+th {
+    text-align: center;
+    font-size: 19px;
+}
+tr:nth-child(1n) {
+    background-color: rgb(219, 218, 218);
+}
+
+tr:nth-child(2n) {
+    background-color: #FFF;
+}
+
+.termek {
+    text-align: center;
+    width: 180px;
+}
+
+.elvalaszto-csik {
+    width: 325px;
+    margin: 0 auto;
+}
+
+
+tr input {
+    cursor: pointer;
+}
+.balra {
+    text-align: left;
+}
+.pipa {
+    width: 50px;
+    padding-top: 6px;
+}
+.pipa input {
+    width: 18px;
+    height: 18px;
+}
+.valaszto {
+    opacity: 0;
+}
+
+.plusszegy-gomb, #uj-mennyiseg-plussz {
+    background-color: #4bb802;
+}
+
+.plusszegy-gomb:hover, #uj-mennyiseg-plussz:hover {
+    transition: 0.3;
+    background-color: #0f800f;
+}
+.minuszegy-gomb, #uj-mennyiseg-minusz {
+    background-color: rgb(243, 56, 69);
+}
+
+.minuszegy-gomb:hover, #uj-mennyiseg-minusz:hover {
+    transition: 0.3;
+    background-color: rgb(187, 14, 14);
+}
+
+
+
+.interakcio-gomb {
+    border: none;
+    text-align: center;
+    width: 25px;
+    height: auto;
+    height: 26px;
+    border-radius: 15px;
+}
+
+#uj-mennyiseg-beiras {
+    width: 40px;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#uj-mertekegyseg {
+    cursor: pointer;
+    margin-left: 18px;
+}
+
+.uj-hozzaadasa {
+    text-align: center;
+    width: 555px;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+.true {
+    text-align: left;
+    transition: 0.4s;
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.false {
+    text-align: left;
+    transition: 0.2s;
+    text-decoration: solid;
+}

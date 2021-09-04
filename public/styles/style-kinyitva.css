@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+body {
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(134, 134, 134);
+    border-bottom: rgb(5, 5, 5) 1px solid;
+}
+td, th {
+    width: 105px;
+    /*border: 2px rgb(102, 102, 102) solid*/
+}
+th {
+    background-color: rgb(226, 226, 226);
+}
+
+.tartalom {
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}
+
+.uj-mertekegyseg {
+    cursor: pointer;
+}
+
+.uj-mennyiseg input {
+    width: 25px;
+}
+.uj-mennyiseg input::-webkit-outer-spin-button,
+.uj-mennyiseg input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+th {
+    text-align: center;
+}
+
+.mertekegyseg-valaszto {
+    display: inline-flex;
+    float: right;
+}
+.mertekegyseg-valaszto p {
+    margin: 5px;
+}
+
+#uj-mertekegyseg {
+    width: 70px;
+}
+
+.hultar-cimke {
+    margin-top: 25vh;
+    text-align: center;
+    color: #8C8C8C;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+.hultar-ikon {
+    position: absolute;
+    top: 2.5%;
+    left: 52%;
+}
+
+table {
+    box-shadow: 3px 5px #cecece;
+}
+.torles-ikon {
+    color: rgb(245, 60, 60);
+    cursor: pointer;
+    padding: 5px;
+    float: right;
+}
+
+.torles-ikon:hover {
+    color: rgb(187, 14, 14);
+    transition: 0.3s;
+}
+
+.plusszegy-gomb, #uj-mennyiseg-plussz {
+    background-color: #4bb802;
+}
+
+.plusszegy-gomb:hover, #uj-mennyiseg-plussz:hover {
+    transition: 0.3;
+    background-color: #0f800f;
+}
+.minuszegy-gomb, #uj-mennyiseg-minusz {
+    background-color: rgb(243, 56, 69);
+}
+
+.minuszegy-gomb:hover, #uj-mennyiseg-minusz:hover {
+    transition: 0.3;
+    background-color: rgb(187, 14, 14);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+button:hover {
+    cursor: pointer;
+    border: none;
+}
+
+.interakcio-gomb {
+    text-align: center;
+    width: 25px;
+    height: auto;
+    height: 26px;
+    border-radius: 15px;
+}
+
+.interakciok-td {
+    width: 115px;
+}
+.interakcio button, .interakcio i {
+    margin: 5px;
+}
+
+.hanyadik {
+    float: left;
+}
+.modal-kovetkezo {
+    background-color: rgb(139, 185, 48);
+    color: white;
+    margin-left: 23%;
+}
+
+.modal-befejez {
+    background-color: rgb(139, 185, 48);
+    color: white;
+    margin-left: 22.8%; 
+}
+
+.modal-vissza {
+    background-color: rgb(202, 202, 13);
+    margin-right: 45%;
+    color: white;
+}
+
+#myModal button {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-kovetkezo-legelso {
+    background-color: rgb(139, 185, 48);
+    color: white;
+    float: left;
+}
+
+#uj-2, #uj-3, #uj-3-footer, #uj-2-footer {
+    display: none;
+}
+.close {
+    color: rgb(245, 60, 60);
+    opacity: 1;
+    border: none;
+}
+.close:hover {
+    color: rgb(187, 14, 14);
+}
+.close:focus {
+    border: none;
+    outline: none;
+}
+.lathatatlan {
+    opacity: 0;
+    cursor: default !important;
+}
