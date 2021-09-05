@@ -10,5 +10,6 @@ hozzaadasgomb.addEventListener('click', () => {
     let megadott_mertekegyseg = mertekegyseg.value 
     if(megadott_szoveg.length != 0) {
         hozzaAdas(megadott_szoveg, megadott_mennyiseg, megadott_mertekegyseg)
+        szovegdoboz.value = ''
     } else { alert('irj be') }
 })

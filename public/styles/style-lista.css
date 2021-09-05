@@ -1,50 +1,29 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
 body {
     background-color: #eeeeee;
-    background-size: 2712px 2712px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Baloo Chettan 2', cursive;
+
 }
 
-
-/*
-    background-image: url('../kepek/zarva.png');
-    background-position: 50% -0.5%;
-    background-repeat: no-repeat;
-*/
-
 .lista-cimke {
-    margin-top: 5vh;
+    margin-top: 3%;
     text-align: center;
     color: #8C8C8C;
     font-size: 25px;
-    display: flex;
-    justify-content: center;
 
 }
 
 .uj-hozzaadas {
-    margin-top: 5vh;
     text-align: center;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 0 auto;
-}
-td {
-    font-size: 35px;
-    padding: 5px;
-    background-color: rgb(134, 134, 134);
-    border-bottom: rgb(5, 5, 5) 1px solid;
-}
 
-th {
-    text-align: center;
-    font-size: 19px;
-}
+
 tr:nth-child(1n) {
     background-color: rgb(219, 218, 218);
 }
@@ -53,18 +32,9 @@ tr:nth-child(2n) {
     background-color: #FFF;
 }
 
-.termek {
-    text-align: center;
-    width: 180px;
-}
-
-.elvalaszto-csik {
-    width: 325px;
-    margin: 0 auto;
-}
 
 
-tr input {
+td input {
     cursor: pointer;
 }
 .balra {
@@ -99,8 +69,6 @@ tr input {
     background-color: rgb(187, 14, 14);
 }
 
-
-
 .interakcio-gomb {
     border: none;
     text-align: center;
@@ -113,6 +81,13 @@ tr input {
 #uj-mennyiseg-beiras {
     width: 40px;
     text-align: center;
+}
+
+button {
+    outline: none;
+}
+button:focus {
+    outline: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -132,7 +107,7 @@ input::-webkit-inner-spin-button {
 }
 
 .true {
-    text-align: left;
+    text-align: left;   
     transition: 0.4s;
     text-decoration: line-through;
     opacity: 0.3;
@@ -142,4 +117,39 @@ input::-webkit-inner-spin-button {
     text-align: left;
     transition: 0.2s;
     text-decoration: solid;
+}
+.kocsi {
+    position: fixed;
+    left: 35%;
+    opacity: 0.02;
+    z-index: -1;
+}
+#vissza-gomb {
+    background-color: rgb(194, 194, 194);
+    border: none;
+    border-radius: 13px;
+}
+
+.vegleg-torles {
+    text-align: center;
+    transition: 0.2s;
+    color: var(--red);
+    font-size: 25px;
+    float: left;
+    cursor: pointer;
+}
+.vegleg-torles:hover {
+    color: rgb(187, 14, 14);
+    transition: 0.3s;
+}
+
+.egesz {
+    text-align: center;
+}
+
+.tablazat-div, .uj-hozzaadasa {
+    display: inline-block;
+}
+.uj-hozzaadasa {
+    padding-bottom: 15%;
 }

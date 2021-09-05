@@ -8,7 +8,7 @@ if(adat == null) {
 }
 
 if(adat == '[]') {
-    console.log('Üres adatok!')
+    console.log('Üres adatok!' + '\nNincs mit beilleszteni!')
 }
 if(adat != '[]') {
     if(adat != null) {}
@@ -26,15 +26,15 @@ function mentettAdatBetoltese() {
 
 function mentettLetrehozas(id, targy, mertekegyseg, darabszam, keszenvane) {
     let uj_targy = document.createElement('tr')
+    uj_targy.id = `targy-${id}`
     uj_targy.innerHTML = 
         `
-        <th class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></th>
-        <th class="valaszto">|</th>
-        <th id="${id}-stilus" class="${keszenvane}">${targy}</th>
-        <th class="valaszto">|</th>
-        <th id="${id}-stilus" class="darabszam ${keszenvane}">${darabszam} ${mertekegyseg}</th>
+            <td class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></td>
+            <td id="targy-${id}-stilus" class="${keszenvane}">${targy}</td>
+            <td id="targy-${id}-stilus" class="darabszam ${keszenvane}">${darabszam} ${mertekegyseg}</td>
+            <td class="vegleg-torles" onclick="veglegesTorles(${id})">&times;</td>
         `
-        document.querySelector('table').appendChild(uj_targy)
+        document.querySelector('tbody').appendChild(uj_targy)
         document.getElementById(id).checked = keszenvane
 }
 
@@ -52,14 +52,14 @@ function hozzaAdas(targy, darabszam, mertekegyseg) {
     })
     localStorage.setItem('hultar-lista', JSON.stringify(mentettek));
     let ujelem = document.createElement('tr')
+    ujelem.id = `targy-${id}`
     ujelem.innerHTML = 
     `
-    <th class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></th>
-    <th class="valaszto">|</th>
-    <th id="${id}-stilus" class="false">${targy}</th>
-    <th class="valaszto">|</th>
-    <th id="${id}-stilus" class="darabszam false">${darabszam} ${mertekegyseg}</th>
+        <td class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></td>
+        <td id="targy-${id}-stilus" class="false">${targy}</td>
+        <td id="targy-${id}-stilus" class="darabszam false">${darabszam} ${mertekegyseg}</td>
+        <td class="vegleg-torles" onclick="veglegesTorles(${id})">&times;</td>
     `
-    document.querySelector('table').appendChild(ujelem)
+    document.querySelector('tbody').appendChild(ujelem)
 }
 

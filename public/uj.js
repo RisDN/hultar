@@ -37,16 +37,16 @@ function hozzaAdas(nev, menny, mertek, lejar) {
 
 function adatTarolasFrissitese() {
     const targyak = document.querySelectorAll('.targy');
-    const osszes_mappa = [];
+    const osszes_targy = [];
     targyak.forEach((elem) => {
         console.log(elem)
-        osszes_mappa.push({
+        osszes_targy.push({
             nev: elem.querySelectorAll('th')[0].innerHTML,
             mennyiseg: elem.querySelectorAll('th')[0].id,
             mertekegyseg: elem.querySelectorAll('th')[1].id,
             lejarat: elem.querySelectorAll('th')[2].innerHTML
         });
     });
-    //console.log(osszes_mappa)
-    localStorage.setItem('hultar-adat', JSON.stringify(osszes_mappa));
+    //console.log(osszes_targy)
+    localStorage.setItem('hultar-adat', JSON.stringify(osszes_targy));
 }

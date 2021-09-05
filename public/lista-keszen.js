@@ -5,6 +5,7 @@ function keszenVanE(id, helyzet) {
             melyik.keszenvane = helyzet
         }
     });
-    document.getElementById(`${id}-stilus`).className = helyzet
+    document.querySelectorAll(`#targy-${id}-stilus`)[0].className = helyzet
+    document.querySelectorAll(`#targy-${id}-stilus`)[1].className = helyzet
     localStorage.setItem('hultar-lista', JSON.stringify(mentett_targyak));
 }
