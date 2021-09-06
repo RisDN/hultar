@@ -10,7 +10,8 @@ const ikonok = [
 const asd = document.querySelector('.asdasd')
 ikonok.forEach(ikon => {
     let kep = document.createElement('img')
-    kep.src = `public/kepek/${ikon}.png`
+    kep.src = `kepek/${ikon}.png`
+    kep.draggable = false
     kep.width = 48
     kep.height = 48
     asd.appendChild(kep)

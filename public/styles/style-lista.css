@@ -11,7 +11,7 @@ body {
 }
 
 .lista-cimke {
-    margin-top: 3%;
+    margin-top: 10%;
     text-align: center;
     color: #8C8C8C;
     font-size: 25px;
@@ -100,6 +100,7 @@ input::-webkit-inner-spin-button {
 }
 
 .uj-hozzaadasa {
+    padding-left: 13%;
     text-align: center;
     width: 555px;
     margin: 0 auto;
@@ -120,7 +121,7 @@ input::-webkit-inner-spin-button {
 }
 .kocsi {
     position: fixed;
-    left: 35%;
+    left: 21%;
     opacity: 0.02;
     z-index: -1;
 }
@@ -144,6 +145,7 @@ input::-webkit-inner-spin-button {
 }
 
 .egesz {
+    padding-left: 3%;
     text-align: center;
 }
 

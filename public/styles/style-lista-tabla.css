@@ -6,7 +6,7 @@ thead th {
     border-bottom: 2px solid rgb(97, 97, 97);
 }
 table {
-    width: 320px;
+    width: 370px;
 }
   
 table, td {
@@ -20,7 +20,7 @@ thead {
   
 tbody {
     display: block;
-    max-height: 500px; 
+    max-height: 150px; 
     overflow-y: auto; 
 }
   
@@ -32,7 +32,7 @@ th, td {
   
 tr {
     display: table;
-    width: 320px;
+    width: 370px;
     box-sizing: border-box;
 }
   

@@ -5,9 +5,10 @@ szerver.szerverInditas()
 let ablak
 app.on('ready', () => {
     ablak = new BrowserWindow({
-        width: 850,
-        height: 550,
-        title: 'Hültár'
+        width: 1000,
+        height: 650,
+        title: 'Hültár',
+        resizable: false
     })
     ablak.loadURL('http://localhost:8585')
     ablak.webContents.openDevTools()

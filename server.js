@@ -15,6 +15,15 @@ function szerverInditas() {
         res.render('index')
     })
 
+    app.get('/kinyitva', (req, res) => {
+        res.render('kinyitva')
+    })  
+
+    app.get('/lista', (req, res) => {
+        res.render('lista')
+    })
+
+
     app.listen(8585, '0.0.0.0')
 
 }

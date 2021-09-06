@@ -23,8 +23,8 @@ function hozzaAdas(nev, menny, mertek, lejar) {
         <th id="${mertek}">${menny} ${mertek}</th>
         <th>${lejar}</th>
         <th class="interakcio">
-            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
             <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
+            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
             <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
         </th>
         `
