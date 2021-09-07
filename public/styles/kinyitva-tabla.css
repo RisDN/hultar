@@ -1,0 +1,53 @@
+table {
+    margin: 0 auto;
+}
+table {
+    width: 500px; 
+    table-layout:fixed;
+    box-shadow: 3px 5px #cecece;
+    white-space: nowrap;
+}
+
+
+thead th {
+    background-color: rgb(175, 173, 173);
+    border-bottom: 2px solid rgb(97, 97, 97);
+}
+
+table, td {
+    border-collapse: collapse;
+}
+  
+thead {
+    display: table;
+    width: calc(100% - 17px);
+}
+  
+tbody {
+    display: block;
+    max-height: 260px; 
+    overflow-y: auto; 
+}
+
+
+thead {
+    display: table;
+    background-color: rgb(175, 173, 173);
+    border-bottom: 2px solid rgb(97, 97, 97);
+}
+td {
+    text-align: center !important;
+    border-bottom: none;
+    border-left: none;
+}
+th {
+    height: 25px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+tr {
+    width: 500px;
+    box-sizing: border-box;
+}

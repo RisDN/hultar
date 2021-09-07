@@ -4,7 +4,7 @@ const lejaratiDatumBeiras = document.querySelector('#uj-lejaratidatum-beiras')
 
 function ujAlaphelyzetbe() {
     ujLetrehozasMenu(1)
-    nevBeiras.value = ''
+    nevBeiras.value = null
     mennyisegBeiras.value = 1
-    lejaratiDatumBeiras.valueAsDate = null;
+    lejaratiDatumBeiras.valueAsDate = null
 }

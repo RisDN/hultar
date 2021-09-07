@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+body {
+    background-color: #eeeeee;
+    background-image: url('../kepek/zarva.png');
+    background-position: 50% -19%;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2', cursive;
+    overflow: hidden;
+}
+
+.bevasarlo-lista-ikon {
+    transition: 0.2s;
+    cursor: pointer;
+    position: fixed;
+    top: 23%;
+    left: 46%;
+    font-size: 45px;
+    transform: rotate(-5deg)
+}
+.bevasarlo-lista-ikon:hover {
+    transition: 0.45s;
+    font-size: 49px;
+}
+.bevasarlo-lista-ikon a {
+    text-decoration: none;
+    color: var(--gray-dark);
+}
+
+.huto-nyitas {
+    position: fixed;
+    width: 18px;
+    height: 76.5px;
+    border-radius: 10px;
+    background-color: #231f20;
+    top: 49.8%;
+    left: 36.2%;
+    cursor: pointer;
+}
+.huto-nyitas-fent {
+    position: fixed;
+    width: 18px;
+    height: 77.4px;
+    border-radius: 10px;
+    background-color: #231f20;
+    top: 25%;
+    left: 36.2%;
+}

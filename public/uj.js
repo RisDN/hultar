@@ -15,12 +15,13 @@ function ujHozzadas() {
 const tablazat = document.querySelector('table')
 function hozzaAdas(nev, menny, mertek, lejar) {
     let uj_targy = document.createElement('tr')
-    nev = nagyBetu(nev)
     uj_targy.className = "targy"
-    uj_targy.innerHTML = 
+    nev = nagyBetu(nev)
+    if(vanIkon(nev)) {
+        uj_targy.innerHTML = 
         `
-        <th id="${menny}">${nev}</th>
-        <th id="${mertek}">${menny} ${mertek}</th>
+        <th id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/${nev}.png"> ${nev}</th>
+        <th class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</th>
         <th>${lejar}</th>
         <th class="interakcio">
             <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
@@ -28,7 +29,21 @@ function hozzaAdas(nev, menny, mertek, lejar) {
             <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
         </th>
         `
-    tablazat.appendChild(uj_targy)
+        document.querySelector('table').appendChild(uj_targy)
+    } else {
+        uj_targy.innerHTML = 
+        `
+        <th id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/kerdojel.png"> ${nev}</th>
+        <th class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</th>
+        <th>${lejar}</th>
+        <th class="interakcio">
+            <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
+            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
+            <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
+        </th>
+        `
+        document.querySelector('tbody').appendChild(uj_targy)
+    }
     $('#myModal').modal('hide')
     ujAlaphelyzetbe()
     adatTarolasFrissitese()
@@ -41,10 +56,10 @@ function adatTarolasFrissitese() {
     targyak.forEach((elem) => {
         console.log(elem)
         osszes_targy.push({
-            nev: elem.querySelectorAll('th')[0].innerHTML,
+            nev: elem.querySelectorAll('th')[0].innerText,
             mennyiseg: elem.querySelectorAll('th')[0].id,
             mertekegyseg: elem.querySelectorAll('th')[1].id,
-            lejarat: elem.querySelectorAll('th')[2].innerHTML
+            lejarat: elem.querySelectorAll('th')[2].innerText
         });
     });
     //console.log(osszes_targy)

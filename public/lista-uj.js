@@ -10,6 +10,13 @@ hozzaadasgomb.addEventListener('click', () => {
     let megadott_mertekegyseg = mertekegyseg.value 
     if(megadott_szoveg.length != 0) {
         hozzaAdas(megadott_szoveg, megadott_mennyiseg, megadott_mertekegyseg)
-        szovegdoboz.value = ''
+        szovegdoboz.value = null
+        $('#myModal').modal('hide')
     } else { alert('irj be') }
 })
+
+
+function menuAlaphelyzet() {
+    szovegdoboz.value = null
+    mennyiseg.value = 1
+}

@@ -11,6 +11,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "electron": "^13.2.3",
+    "electron-forge": "^5.2.4",
     "express": "^4.17.1",
     "socket.io": "^4.1.3"
   }
