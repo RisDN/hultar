@@ -174,4 +174,16 @@ button:focus {
     float: left;
     margin-right: 5px;
 }
-
+#hiba-uzenet {
+    display: none;
+    user-select: none;
+    position: fixed;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -150px;
+    z-index: -300;
+}

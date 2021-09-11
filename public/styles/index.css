@@ -30,6 +30,7 @@ body {
 }
 
 .huto-nyitas {
+    transition: 0.2s;
     position: fixed;
     width: 18px;
     height: 76.5px;
@@ -39,6 +40,13 @@ body {
     left: 36.2%;
     cursor: pointer;
 }
+
+.huto-nyitas:hover {
+    transition: 0.45s;
+    width: 20px;
+    height: 78.5px;
+}
+
 .huto-nyitas-fent {
     position: fixed;
     width: 18px;

@@ -12,15 +12,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hültár - Kinyitva</title>
-    <script defer src="uj.js"></script>
-    <script defer src="uj-letrehozas.js"></script>
-    <script defer src="uj-alaphelyzetbe.js"></script>
-    <script defer src="uj-mennyiseg.js"></script>
-    <script defer src="script.js"></script>
-    <!-- <script defer src="ikonok.js"></script> -->
+    <script defer src="scripts/ikonok.js"></script>
+    <script defer src="scripts/uj.js"></script>
+    <script defer src="scripts/uj-letrehozas.js"></script>
+    <script defer src="scripts/uj-alaphelyzetbe.js"></script>
+    <script defer src="scripts/uj-mennyiseg.js"></script>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/f5.js"></script>
+    <script defer src="scripts/hiba.js"></script>
 </head>
 
 <body>
+
+
     <div class="hultar-cimke">
         <h3>hűtő leltár</h3>
     </div>
@@ -41,11 +45,25 @@
         </table>
     </div>
 
+    <div style="width: 590px; margin: 0 auto;">
+        <hr>
+    </div>
+
+    <div style="text-align: center;">
+        <button type="button" onclick="ujAlaphelyzetbe()" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Új hozzáadása</button>
+        <button onclick="window.location.href ='/'" class="btn btn-primary">Vissza <i style="font-size: 12px;" class="fas fa-undo-alt"></i></button>
+    </div>
+
+
     <div class="tartalom">
 
-  <button type="button" onclick="ujAlaphelyzetbe()" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Új hozzáadása</button>
-
   <div class="modal fade" id="myModal">
+
+    <div id="hiba-uzenet">
+        <i style="padding: 3px; font-size: 45px; color: var(--red);" class="fas fa-exclamation-circle"></i><br>
+        <span style="background-color: var(--red); color: whitesmoke; border-radius: 7px; padding: 2px;" id="hiba-uzenet-kijelzo"></span>
+    </div>
+
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">

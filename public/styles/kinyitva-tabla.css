@@ -51,3 +51,8 @@ tr {
     width: 500px;
     box-sizing: border-box;
 }
+
+
+tr:nth-child(2n) {
+    background-color: rgb(15, 1, 1) !important;
+}

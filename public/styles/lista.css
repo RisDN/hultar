@@ -32,11 +32,6 @@ tr:nth-child(2n) {
     background-color: #FFF;
 }
 
-
-
-td input {
-    cursor: pointer;
-}
 .balra {
     text-align: left;
 }
@@ -45,6 +40,7 @@ td input {
     padding-top: 6px;
 }
 .pipa input {
+    cursor: pointer;
     width: 18px;
     height: 18px;
 }
@@ -151,4 +147,17 @@ input::-webkit-inner-spin-button {
 .hozzadas-gomb {
     background-color: var(--green);
     color: cornsilk;
+}
+#hiba-uzenet {
+    display: none;
+    user-select: none;
+    position: fixed;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    margin-top: -220px;
+    margin-left: -150px;
+    z-index: -300;
 }

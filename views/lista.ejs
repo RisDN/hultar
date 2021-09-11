@@ -12,15 +12,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hültár - Bevásárló lista</title>
-    <script defer src="lista-vegleges.js"></script>
-    <script defer src="lista-keszen.js"></script>
-    <script defer src="lista-uj.js"></script>
-    <script defer src="lista.js"></script>
-    <script defer src="uj-mennyiseg.js"></script>
+    <script defer src="scripts/ikonok.js"></script>
+    <script defer src="scripts/lista-vegleges.js"></script>
+    <script defer src="scripts/lista-keszen.js"></script>
+    <script defer src="scripts/lista-uj.js"></script>
+    <script defer src="scripts/lista.js"></script>
+    <script defer src="scripts/uj-mennyiseg.js"></script>
+    <script defer src="scripts/f5.js"></script>
+    <script defer src="scripts/hiba.js"></script>
 </head>
 
 <body>
-
     <div class="kocsi"><img draggable="false" src="kepek/kocsi.png" alt=""></div>
 
     <div class="lista-cimke">
@@ -50,8 +52,15 @@
     </div>
 
     <button type="button" onclick="menuAlaphelyzet()" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Új hozzáadása</button>
+    <button onclick="window.location.href ='/'" class="btn btn-primary">Vissza <i style="font-size: 12px;" class="fas fa-undo-alt"></i></button>
 
     <div class="modal fade" id="myModal">
+
+        <div id="hiba-uzenet">
+            <i style="padding: 3px; font-size: 45px; color: var(--red);" class="fas fa-exclamation-circle"></i><br>
+            <span style="background-color: var(--red); color: whitesmoke; border-radius: 7px; padding: 2px;" id="hiba-uzenet-kijelzo"></span>
+        </div>
+
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
@@ -85,5 +94,4 @@
         </div>
       </div>
 </div>
-<i id="vissza-gomb" style="text-align: center; cursor: pointer;" onclick="window.location.href ='/'" class="fas fa-undo-alt"></i>
 </html>
