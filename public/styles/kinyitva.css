@@ -9,15 +9,6 @@ body {
 }
 
 
-td {
-    text-align: center;
-    background-color: rgb(134, 134, 134);
-    border-bottom: rgb(5, 5, 5) 1px solid;
-}
-
-th {
-    background-color: rgb(226, 226, 226);
-}
 
 
 .uj-mertekegyseg {

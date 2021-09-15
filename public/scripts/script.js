@@ -18,27 +18,27 @@ function mentettLetrehozas(nev, menny, mertek, lejar) {
     if(vanIkon(nev)) {
         uj_targy.innerHTML = 
         `
-        <th id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/${nev}.png"> ${nev}</th>
-        <th class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</th>
-        <th>${lejar}</th>
-        <th class="interakcio">
+        <td id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/${nev}.png"> ${nev}</td>
+        <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
+        <td>${lejar}</td>
+        <td class="interakcio">
             <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
             <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
             <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
-        </th>
+        </td>
         `
         document.querySelector('tbody').appendChild(uj_targy)
     } else {
         uj_targy.innerHTML = 
         `
-        <th id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/kerdojel.png"> ${nev}</th>
-        <th class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</th>
-        <th>${lejar}</th>
-        <th class="interakcio">
+        <td id="${menny}"><img width="${ikonWidth}" class="targy-ikon" heigth="${ikonHeight}" src="kepek/kerdojel.png"> ${nev}</td>
+        <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
+        <td>${lejar}</td>
+        <td class="interakcio">
             <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
             <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
             <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
-        </th>
+        </td>
         `
         document.querySelector('tbody').appendChild(uj_targy)
     }

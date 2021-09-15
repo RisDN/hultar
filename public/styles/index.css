@@ -47,6 +47,10 @@ body {
     height: 78.5px;
 }
 
+#myModal {
+    overflow: hidden;
+}
+
 .huto-nyitas-fent {
     position: fixed;
     width: 18px;
@@ -55,4 +59,55 @@ body {
     background-color: #231f20;
     top: 25%;
     left: 36.2%;
+}
+
+.ikonok {
+    width: 150px;
+    display: flex;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.ikonok img {
+    margin-right: 5px;
+}
+
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 55vh;
+    overflow: auto;
+}
+
+.close {
+    color: rgb(245, 60, 60);
+    opacity: 1;
+    border: none;
+}
+.close:hover {
+    color: rgb(187, 14, 14);
+}
+.close:focus {
+    border: none;
+    outline: none;
+}
+
+.beallitasok {
+    transition: 0.2s;
+    font-size: 17px;
+    cursor: pointer;
+    position: fixed;
+    top: 83%;
+    left: 62%;
+}
+.beallitasok:hover {
+    transition: 0.45s;
+    font-size: 19px;
+}
+button {
+    outline: none;
+}
+button:focus {
+    outline: none;
 }

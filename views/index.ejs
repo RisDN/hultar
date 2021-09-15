@@ -7,12 +7,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index-ikonok.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hültár - Csukva</title>
     <script defer src="scripts/ikonok.js"></script>
     <script defer src="scripts/f5.js"></script>
+    <script defer src="scripts/beallitasok.js"></script>
 </head>
 
 <body>
@@ -26,5 +28,49 @@
     <div class="huto-nyitas-fent"></div>
 
     <div onclick="window.location.href = 'kinyitva'" class="huto-nyitas"></div>
+    <div class="beallitasok"><i data-toggle="modal" data-target="#myModal" class="fas fa-cogs"></i></div>
+
+
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Beállítások</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        
+            <div class="modal-body">
+
+                <label for="torles-1">Bevásárló lista adat törlése: </label>
+                <button name="torles-1" id="adat-torles-gomb-bevasarlo">Törlés</button>
+
+                <br>
+
+                <label for="torles-2">Hűtő leltár adat törlése: </label>
+                <button name="torles-2" id="adat-torles-gomb-leltar">Törlés</button>
+
+                <br>
+
+                <label for="torles-3">Összes adat törlése: </label>
+                <button name="torles-3" id="adat-torles-gomb">Törlés</button>
+
+                <br>
+
+                <div id="ikonok-lenyitas">
+                    <p>Összes elérhető ikon <i class="fas fa-caret-down"></i></p>
+                    <div class="elerheto-ikonok"></div>    
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <p>Készült a 2021-es <b>Formáld a Világod</b> versenyre <b>Rostás András</b> által <i style="font-size: 11.3px;" class="fas fa-crown"></i></p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
 </body>
 </html>

@@ -56,10 +56,10 @@ function adatTarolasFrissitese() {
     targyak.forEach((elem) => {
         console.log(elem)
         osszes_targy.push({
-            nev: elem.querySelectorAll('th')[0].innerText,
-            mennyiseg: elem.querySelectorAll('th')[0].id,
-            mertekegyseg: elem.querySelectorAll('th')[1].id,
-            lejarat: elem.querySelectorAll('th')[2].innerText
+            nev: elem.querySelectorAll('td')[0].innerText,
+            mennyiseg: elem.querySelectorAll('td')[0].id,
+            mertekegyseg: elem.querySelectorAll('td')[1].id,
+            lejarat: elem.querySelectorAll('td')[2].innerText
         });
     });
     //console.log(osszes_targy)

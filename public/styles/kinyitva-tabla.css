@@ -9,11 +9,6 @@ table {
 }
 
 
-thead th {
-    background-color: rgb(175, 173, 173);
-    border-bottom: 2px solid rgb(97, 97, 97);
-}
-
 table, td {
     border-collapse: collapse;
 }
@@ -35,12 +30,15 @@ thead {
     background-color: rgb(175, 173, 173);
     border-bottom: 2px solid rgb(97, 97, 97);
 }
+
+
 td {
     text-align: center !important;
     border-bottom: none;
     border-left: none;
+
 }
-th {
+td {
     height: 25px;
     width: 200px;
     white-space: nowrap;
@@ -53,6 +51,11 @@ tr {
 }
 
 
+
 tr:nth-child(2n) {
-    background-color: rgb(15, 1, 1) !important;
+    background-color: #FFF;
+}
+thead th {
+    background-color: rgb(175, 173, 173) !important;
+    border-bottom: 2px solid rgb(97, 97, 97);
 }
