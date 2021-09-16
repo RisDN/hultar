@@ -6,5 +6,15 @@ function ujAlaphelyzetbe() {
     ujLetrehozasMenu(1)
     nevBeiras.value = null
     mennyisegBeiras.value = 1
-    lejaratiDatumBeiras.valueAsDate = null
+
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    
+    
+    document.querySelector('#uj-lejaratidatum-beiras').value =  `${yyyy}-${mm}-${dd}`
+    
+
 }

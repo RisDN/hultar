@@ -15,7 +15,9 @@ function ujHozzadas() {
 const tablazat = document.querySelector('table')
 function hozzaAdas(nev, menny, mertek, lejar) {
     let uj_targy = document.createElement('tr')
+    let id = new Date().getTime()
     uj_targy.className = "targy"
+    uj_targy.id = id
     nev = nagyBetu(nev)
     if(vanIkon(nev)) {
         uj_targy.innerHTML = 
@@ -24,12 +26,12 @@ function hozzaAdas(nev, menny, mertek, lejar) {
         <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
         <td>${lejar}</td>
         <td class="interakcio">
-            <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
-            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
-            <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
+            <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+            <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+            <i class="fas torles-ikon fa-times" onclick="veglegesTorles(${id})"></i>
         </td>
         `
-        document.querySelector('table').appendChild(uj_targy)
+        document.querySelector('tbody').appendChild(uj_targy)
     } else {
         uj_targy.innerHTML = 
         `
@@ -37,9 +39,9 @@ function hozzaAdas(nev, menny, mertek, lejar) {
         <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
         <td>${lejar}</td>
         <td class="interakcio">
-            <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
-            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
-            <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
+        <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+        <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+            <i class="fas torles-ikon fa-times" onclick="veglegesTorles(${id})"></i>
         </td>
         `
         document.querySelector('tbody').appendChild(uj_targy)
@@ -59,7 +61,8 @@ function adatTarolasFrissitese() {
             nev: elem.querySelectorAll('td')[0].innerText,
             mennyiseg: elem.querySelectorAll('td')[0].id,
             mertekegyseg: elem.querySelectorAll('td')[1].id,
-            lejarat: elem.querySelectorAll('td')[2].innerText
+            lejarat: elem.querySelectorAll('td')[2].innerText,
+            id: elem.id
         });
     });
     //console.log(osszes_targy)

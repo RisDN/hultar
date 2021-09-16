@@ -5,14 +5,15 @@ function mentettAdatBetoltese() {
     const mentett_targyak = JSON.parse(localStorage.getItem("hultar-adat"));
     if (mentett_targyak) {
         mentett_targyak.forEach((mentettek) => {
-            mentettLetrehozas(mentettek.nev, mentettek.mennyiseg, mentettek.mertekegyseg, mentettek.lejarat, );
+            mentettLetrehozas(mentettek.nev, mentettek.mennyiseg, mentettek.mertekegyseg, mentettek.lejarat, mentettek.id);
         });
     }
 }
 
-function mentettLetrehozas(nev, menny, mertek, lejar) {
+function mentettLetrehozas(nev, menny, mertek, lejar, id) {
     let uj_targy = document.createElement('tr')
     nev = nagyBetu(nev)
+    uj_targy.id = id
     uj_targy.className = "targy"
 
     if(vanIkon(nev)) {
@@ -22,9 +23,9 @@ function mentettLetrehozas(nev, menny, mertek, lejar) {
         <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
         <td>${lejar}</td>
         <td class="interakcio">
-            <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
-            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
-            <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
+        <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+        <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+            <i class="fas torles-ikon fa-times" onclick="veglegesTorles(${id})"></i>
         </td>
         `
         document.querySelector('tbody').appendChild(uj_targy)
@@ -35,9 +36,9 @@ function mentettLetrehozas(nev, menny, mertek, lejar) {
         <td class="targy-mertekegyseg" id="${mertek}">${menny} ${mertek}</td>
         <td>${lejar}</td>
         <td class="interakcio">
-            <button class="minuszegy-gomb interakcio-gomb" id="${nev}-minuszegy">-</button>
-            <button class="plusszegy-gomb interakcio-gomb" id="${nev}-plusszegy">+</button>
-            <i class="fas torles-ikon fa-times" id="${nev}-torles"></i>
+        <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+        <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+            <i class="fas torles-ikon fa-times" onclick="veglegesTorles(${id})"></i>
         </td>
         `
         document.querySelector('tbody').appendChild(uj_targy)

@@ -11,10 +11,6 @@ ikonok.forEach((ikon) => {
 })
 
 
-
-
-
-
 ikonokLenyitasaGomb.addEventListener('click', () => {
     if(beallitasokIkonok.className == 'lenyitva') {
         beallitasokIkonok.className = 'csukva'
@@ -22,8 +18,6 @@ ikonokLenyitasaGomb.addEventListener('click', () => {
         beallitasokIkonok.className = 'lenyitva'
     }
 })
-
-
 
 
 const adatTorlesGomb = document.querySelector('#adat-torles-gomb')
