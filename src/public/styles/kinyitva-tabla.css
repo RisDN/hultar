@@ -27,10 +27,8 @@ tbody {
 
 thead {
     display: table;
-    background-color: rgb(175, 173, 173);
     border-bottom: 2px solid rgb(97, 97, 97);
 }
-
 
 td {
     text-align: center !important;
@@ -50,12 +48,13 @@ tr {
     box-sizing: border-box;
 }
 
-
+tr:nth-child(1n) {
+    background-color: rgb(219, 218, 218);
+}
 
 tr:nth-child(2n) {
     background-color: #FFF;
 }
-thead th {
-    background-color: rgb(175, 173, 173) !important;
-    border-bottom: 2px solid rgb(97, 97, 97);
+thead tr {
+    background-color: rgb(175 173 173) !important;
 }

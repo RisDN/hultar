@@ -20,9 +20,13 @@
     <script defer src="scripts/uj-mennyiseg.js"></script>
     <script defer src="scripts/f5.js"></script>
     <script defer src="scripts/hiba.js"></script>
+    <script defer src="scripts/interakciok-lista.js"></script>
+    <script defer src="scripts/hangok.js"></script>
 </head>
 
 <body>
+    <audio src="hangok/lista.mp3"></audio>
+
     <div class="kocsi"><img draggable="false" src="kepek/kocsi.png" alt=""></div>
 
     <div class="lista-cimke">
@@ -70,7 +74,7 @@
         
             <div class="modal-body">
 
-                <label for="szoveg">Termék: <input name="szoveg" id="uj-szoveg" type="text"></label><br>
+                <label for="szoveg">Termék: <input name="szoveg" maxlength="10" id="uj-szoveg" type="text"></label><br>
                 <label for="mennyiseg">Mennyiség: 
                     <button name="mennyiseg" class="interakcio-gomb" onclick="ujMennyisegAllitas('minusz')" id="uj-mennyiseg-minusz">-</button>
                     <input disabled id="uj-mennyiseg-beiras" value="1" max="100" min="1" type="number">

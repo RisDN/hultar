@@ -11,17 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hültár - Csukva</title>
-    <script defer src="scripts/ikonok.js"></script>
-    <script defer src="scripts/f5.js"></script>
-    <script defer src="scripts/beallitasok.js"></script>
+    <title>Hültár</title>
 </head>
 
 <body>
     <h1 style="text-align: center;">hültár</h1>
-    
     <div class="bevasarlo-lista-ikon">
-        <a onclick="window.location.href = 'lista'"><i class="fas fa-clipboard-list"></i></a>
+        <a onclick="window.location.href = 'lista';"><i class="fas fa-clipboard-list"></i></a>
     </div>
     <p style="text-align: center; opacity: 0.3;">Készítette: Rostás András Péter</p>
 
@@ -56,6 +52,14 @@
 
                 <br>
 
+                <label for="hangok">Hangok: </label>
+                <select style="cursor: pointer;" name="hangok" id="hang-allitas">
+                  <option value="bekapcsolva">Bekapcsolva</option>
+                  <option value="kikapcsolva">Kikapcsolva</option>
+                </select>
+
+                <br>
+
                 <div id="ikonok-lenyitas">
                     <p>Összes elérhető ikon <i class="fas fa-caret-down"></i></p>
                     <div class="elerheto-ikonok"></div>    
@@ -71,6 +75,8 @@
           </div>
         </div>
       </div>
-
+      <script defer src="scripts/ikonok.js"></script>
+      <script defer src="scripts/f5.js"></script>
+      <script defer src="scripts/beallitasok.js"></script>
 </body>
 </html>

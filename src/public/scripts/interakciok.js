@@ -29,10 +29,10 @@ function darabSzamAllitas(id, hova) {
         localStorage.setItem('hultar-adat', JSON.stringify(vissza));
     
     
-        let regi = document.getElementById(id).querySelector('#darab').innerHTML
+        let regi = document.getElementById(id).querySelector('.targy-mertekegyseg').innerHTML
         let elvagott = regi.split(' ')
         let ujMennyiseg = parseInt(elvagott[0]) + 1
-        document.getElementById(id).querySelector('#darab').innerHTML = `${ujMennyiseg} ${elvagott[1]}`
+        document.getElementById(id).querySelector('.targy-mertekegyseg').innerHTML = `${ujMennyiseg} ${elvagott[1]}`
 
     } 
     if(hova == 'le') {
@@ -54,11 +54,11 @@ function darabSzamAllitas(id, hova) {
         localStorage.setItem('hultar-adat', JSON.stringify(vissza));
     
     
-        let regi = document.getElementById(id).querySelector('#darab').innerHTML
+        let regi = document.getElementById(id).querySelector('.targy-mertekegyseg').innerHTML
         let elvagott = regi.split(' ')
         if(parseInt(elvagott[0]) > 0) {
             let ujMennyiseg = parseInt(elvagott[0]) - 1
-            document.getElementById(id).querySelector('#darab').innerHTML = `${ujMennyiseg} ${elvagott[1]}`
+            document.getElementById(id).querySelector('.targy-mertekegyseg').innerHTML = `${ujMennyiseg} ${elvagott[1]}`
         }
 
     }

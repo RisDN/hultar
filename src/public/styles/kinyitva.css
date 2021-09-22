@@ -103,6 +103,10 @@ button:focus {
     border-radius: 15px;
 }
 
+button {
+    color: whitesmoke;
+}
+
 .interakciok-td {
     width: 115px;
 }
@@ -177,4 +181,11 @@ button:focus {
     margin-top: -220px;
     margin-left: -150px;
     z-index: -300;
+}
+.lista {
+    position: fixed;
+    left: 29%;
+    bottom: 11%;
+    opacity: 0.04;
+    z-index: -1;
 }

@@ -6,7 +6,7 @@ const ikonok = [
     'Vaj',
     'Sonka',
     'Kifli',
-    'Kenyer',
+    'Kenyér',
     'Sör',
     'Csoki',
     'Csokoládé',

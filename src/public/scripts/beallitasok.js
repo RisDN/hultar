@@ -6,7 +6,7 @@ const ikonokLenyitasaGomb = document.querySelector('#ikonok-lenyitas')
 ikonok.forEach((ikon) => {
     let ujIkon = document.createElement('div')
     ujIkon.className = 'ikonok'
-    ujIkon.innerHTML = `<img width="28" height="28" src="kepek/${ikon}.png">  <h6>${ikon}</h6> `
+    ujIkon.innerHTML = `<img width="28" height="28" src="kepek/${ikon}.png">  <h6>${ikon}</h6>`
     beallitasokIkonok.appendChild(ujIkon)
 })
 
@@ -47,3 +47,19 @@ adatTorlesGombLel.addEventListener('click', () => {
         alert('Törölve!')
     }
 })
+
+
+const adat = localStorage.getItem('hangok')
+const hang_beallitas = document.getElementById('hang-allitas')
+
+if(adat == null) {
+    localStorage.setItem('hangok', 'bekapcsolva');
+} else {
+    hang_beallitas.value = localStorage.getItem('hangok')
+}
+
+hang_beallitas.addEventListener('change', () => {
+    localStorage.setItem('hangok', hang_beallitas.value)
+})
+
+
