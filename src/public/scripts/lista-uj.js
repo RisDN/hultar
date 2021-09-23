@@ -12,6 +12,12 @@ hozzaadasgomb.addEventListener('click', () => {
         hozzaAdas(megadott_szoveg, megadott_mennyiseg, megadott_mertekegyseg)
         szovegdoboz.value = null
         $('#myModal').modal('hide')
+
+        if(localStorage.getItem('hangok') == 'bekapcsolva') {
+            document.querySelector('#iras').volume = 0.2
+            document.querySelector('#iras').play()
+        }
+
     } else { hiba('Kérlek írj be egy nevet!') }
 })
 

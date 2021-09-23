@@ -1,5 +1,6 @@
 table {
     margin: 0 auto;
+    background-color: rgb(175 173 173);
 }
 thead th {
     background-color: rgb(175, 173, 173);
@@ -7,6 +8,7 @@ thead th {
 }
 table {
     width: 370px;
+    background-color: rgb(175 173 173);
 }
   
 table, td {

@@ -79,7 +79,11 @@ function hozzaAdas(targy, darabszam, mertekegyseg) {
             <td class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></td>
             <td id="targy-${id}-stilus" class="false"><img width="25" class="targy-ikon" heigth="25" src="kepek/${targy}.png"> ${targy}</td>
             <td id="targy-${id}-stilus" class="darabszam false">${darabszam} ${mertekegyseg}</td>
-            <td class="vegleg-torles" onclick="veglegesTorles(${id})">&times;</td>
+            <td class="interakciok">
+                <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+                <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+                <i class="fas torles-ikon fa-times" style="padding: 5px;" onclick="veglegesTorles(${id})"></i>
+            </td>
         `
     } else {
         ujelem.innerHTML = 
@@ -87,7 +91,11 @@ function hozzaAdas(targy, darabszam, mertekegyseg) {
             <td class="pipa"><input id="${id}" onclick="keszenVanE(this.id, this.checked)" type="checkbox"></td>
             <td id="targy-${id}-stilus" class="false"><img width="25" class="targy-ikon" heigth="25" src="kepek/kerdojel.png"> ${targy}</td>
             <td id="targy-${id}-stilus" class="darabszam false">${darabszam} ${mertekegyseg}</td>
-            <td class="vegleg-torles" onclick="veglegesTorles(${id})">&times;</td>
+            <td class="interakciok">
+                <button class="minuszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'le')">-</button>
+                <button class="plusszegy-gomb interakcio-gomb" onclick="darabSzamAllitas(${id}, 'fel')">+</button>
+                <i class="fas torles-ikon fa-times" style="padding: 5px;" onclick="veglegesTorles(${id})"></i>
+            </td>
         `
     }
 
