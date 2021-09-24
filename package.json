@@ -35,14 +35,15 @@
     "oneClick": "false",
     "allowToChangeInstallationDirectory": true
   },
-  "files": ["**/*"],
+  "files": [
+    "**/*"
+  ],
   "extraResources": [
     "./src/public/**",
     "src/public",
     "./src/public/*",
     "./src/public"
   ],
-
   "keywords": [],
   "author": {
     "name": "Ris",

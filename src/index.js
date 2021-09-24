@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 const szerver = require('./server.js')
+const path = require('path');
 
 szerver.szerverInditas()
 let ablak
@@ -11,7 +12,7 @@ app.on('ready', () => {
         resizable: false
     })
 
-    //ablak.setIcon('src/ikon.ico')
+    ablak.setIcon(path.join(__dirname, 'public/kepek/ikon.ico'))
     ablak.loadURL('http://localhost:8585')
     ablak.webContents.openDevTools()
     ablak.removeMenu()
