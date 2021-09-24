@@ -15,16 +15,27 @@
 </head>
 
 <body>
+    <audio id="putty" src="hangok/putty.mp3"></audio>
+
+	<script>
+		function putty() {
+			if(localStorage.getItem('hangok') == 'bekapcsolva') {
+				document.querySelector('#putty').volume = 0.03
+				document.querySelector('#putty').play()
+			}
+		}
+	</script>
+
     <h1 style="text-align: center;">hültár</h1>
     <div class="bevasarlo-lista-ikon">
-        <a onclick="window.location.href = 'lista';"><i class="fas fa-clipboard-list"></i></a>
+        <a onclick="window.location.href = 'lista';" onmouseover="putty()"><i class="fas fa-clipboard-list"></i></a>
     </div>
-    <p style="text-align: center; opacity: 0.3;">Készítette: Rostás András Péter</p>
+    <!-- <p style="text-align: center; opacity: 0.3;">Készítette: Rostás András Péter</p> -->
 
     <div class="huto-nyitas-fent"></div>
 
-    <div onclick="window.location.href = 'kinyitva'" class="huto-nyitas"></div>
-    <div class="beallitasok"><i data-toggle="modal" data-target="#myModal" class="fas fa-cogs"></i></div>
+    <div onclick="window.location.href = 'kinyitva'" onmouseover="putty()" class="huto-nyitas"></div>
+    <div class="beallitasok"><i data-toggle="modal" data-target="#myModal" onmouseover="putty()" class="fas fa-cogs"></i></div>
 
 
     <div class="modal fade" id="myModal">

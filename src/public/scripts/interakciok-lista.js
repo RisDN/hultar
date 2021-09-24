@@ -39,14 +39,13 @@ function darabSzamAllitas(id, hova) {
         localStorage.setItem('hultar-lista', JSON.stringify(vissza));
 
         let regi = document.getElementById(`targy-${id}`).querySelector('.darabszam').innerHTML
-        console.log(regi)
+        //console.log(regi)
         let elvagott = regi.split(' ')
-        console.log(elvagott)
+        //console.log(elvagott)
         if(parseInt(elvagott[0]) > 0) {
             let ujMennyiseg = parseInt(elvagott[0]) - 1
             document.getElementById(`targy-${id}`).querySelector('.darabszam').innerHTML = `${ujMennyiseg} ${elvagott[1]}`
         }
-
 
     }
 

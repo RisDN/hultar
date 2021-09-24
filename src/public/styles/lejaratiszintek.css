@@ -1,0 +1,27 @@
+.lejaratiszint-0 {
+    text-decoration: line-through;
+    font-weight: bold;
+    color: rgb(100, 16, 16);    
+}
+
+.lejaratiszint-1 {
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(140, 16, 16);   
+}
+
+.lejaratiszint-2 {
+    font-weight: bold;
+    color: rgb(214, 140, 29);   
+}
+
+.lejaratiszint-3 {
+    color: rgb(240, 182, 96);   
+}
+
+.lejaratiszint-4 {
+    color: rgb(94, 126, 57);   
+}
+.lejaratiszint-5, .lejaratiszint-6 {
+    color: rgb(121, 228, 0);   
+}

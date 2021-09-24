@@ -1,6 +1,7 @@
 table {
     margin: 0 auto;
     background-color: rgb(175 173 173);
+    box-shadow: 3px 5px #cecece;
 }
 thead th {
     background-color: rgb(175, 173, 173);
