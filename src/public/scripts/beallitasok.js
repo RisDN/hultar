@@ -26,26 +26,20 @@ const adatTorlesGombLel = document.querySelector('#adat-torles-gomb-leltar')
 
 
 adatTorlesGomb.addEventListener('click', () => {
-    if(window.confirm('Biztosan szeretnéd törölni az összes adatot a hültárból?')) {
-        localStorage.removeItem('hultar-adat')
-        localStorage.removeItem('hultar-lista')  
-        alert('Törölve!')
-    }
+    localStorage.removeItem('hultar-adat')
+    localStorage.removeItem('hultar-lista') 
+    window.location.reload()
 })
 
 
 adatTorlesGombBe.addEventListener('click', () => {
-    if(window.confirm('Biztosan szeretnéd törölni az összes adatot a bevásárló listából?')) {
-        localStorage.removeItem('hultar-lista')
-        alert('Törölve!')
-    }
+    localStorage.removeItem('hultar-lista')  
+    window.location.reload()
 })
 
 adatTorlesGombLel.addEventListener('click', () => {
-    if(window.confirm('Biztosan szeretnéd törölni az összes adatot a hütő leltárból?')) {
-        localStorage.removeItem('hultar-adat')
-        alert('Törölve!')
-    }
+    localStorage.removeItem('hultar-adat')
+    window.location.reload()
 })
 
 

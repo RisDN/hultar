@@ -18,19 +18,19 @@
       "target": [
         "nsis"
       ],
-      "icon": "src/public/images/ikon.ico"
+      "icon": "src/public/kepek/ikon.ico"
     },
     "nsis": {
-      "installerIcon": "src/public/images/ikon.ico",
-      "uninstallerIcon": "src/public/images/ikon.ico",
+      "installerIcon": "src/public/kepek/ikon.ico",
+      "uninstallerIcon": "src/public/kepek/ikon.ico",
       "uninstallDisplayName": "Hültár",
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
     }
   },
   "nsis": {
-    "installerIcon": "src/public/images/ikon.ico",
-    "uninstallerIcon": "src/public/images/ikon.ico",
+    "installerIcon": "src/public/kepek/ikon.ico",
+    "uninstallerIcon": "src/public/kepek/ikon.ico",
     "uninstallDisplayName": "Hültár",
     "oneClick": "false",
     "allowToChangeInstallationDirectory": true
