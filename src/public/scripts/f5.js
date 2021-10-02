@@ -1,4 +1,4 @@
-document.onkeydown = gombLenyomas;
+/*document.onkeydown = gombLenyomas;
 document.onkeypress = gombLenyomas
 document.onkeyup = gombLenyomas;
 
@@ -12,4 +12,4 @@ function gombLenyomas(e){
           window.location.reload()
           megynyomva = true;
      }
- }
+ }*/
